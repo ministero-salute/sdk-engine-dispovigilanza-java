@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flusso>
+   <campo nomecampo="rapporto_codRapportoWeb">
+      <regola codiceErrore="1000" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1001" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>30</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_numRapporto">
+      <regola codiceErrore="1002" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1003" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>120</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_rapportoRelativoA">
+      <regola codiceErrore="1004" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>       
+      <regola codiceErrore="1005" descrizioneErrore="Non appartenenza al dominio di riferimento per un campo ad obbligatorietà condizionata" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>Incidente</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+    <campo nomecampo="rapporto_luogoEpisodio_codiceStruttura">
+      <regola codiceErrore="1006" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>                        
+   </campo>
+    <campo nomecampo="rapporto_luogoEpisodio_nomeStruttura">
+      <regola codiceErrore="1008" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>                             
+   </campo>
+    <campo nomecampo="rapporto_luogoEpisodio_annoValiditaStruttTerrit">  
+     <regola codiceErrore="10101" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>                                     
+       <regola codiceErrore="1010" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaLunghezzaCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>4</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>    
+      <regola codiceErrore="1011" descrizioneErrore="Il campo deve essere numerico" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^[12]\d{3}$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>                      
+   </campo>
+    <campo nomecampo="rapporto_luogoEpisodio_repartoStruttura">
+      <regola codiceErrore="1013" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>                      
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_telefono">
+      <regola codiceErrore="1015" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>20</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+       <regola codiceErrore="1016" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^[0-9]{0,20}$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>                     
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_fax">
+     <regola codiceErrore="1018" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>20</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+       <regola codiceErrore="1019" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^[0-9]{0,20}$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>                     
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_email">
+      <regola codiceErrore="1021" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>60</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+       <regola codiceErrore="1022" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>                     
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_dataEpisodio">
+     <regola codiceErrore="1023" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>             
+       <regola codiceErrore="1024" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^((0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/[12]\d{3})$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>                     
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_codAziendaOspLocale">
+      <regola codiceErrore="1025" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>      
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_aziendaOspLocale">
+      <regola codiceErrore="1027" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1028" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>40</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_nomeOperatore">
+      <regola codiceErrore="1030" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1031" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>50</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_cognomeOperatore">
+      <regola codiceErrore="1032" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1033" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>50</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_qualificaOperatore">
+      <regola codiceErrore="1034" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1035" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_nomeResponsabile">
+      <regola codiceErrore="1036" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1037" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>50</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_luogoEpisodio_cognomeResponsabile">
+      <regola codiceErrore="1038" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1039" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>50</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_tipoDispositivo">
+      <regola codiceErrore="1040" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_codiceDispositivo" />
+    <campo nomecampo="rapporto_dispositivo_nomeDispositivo">
+      <regola codiceErrore="1043" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1044" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>200</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_modelloDispositivo">
+      <regola codiceErrore="1047" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>300</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_codiceFabbrDispositivo" />      
+   <campo nomecampo="rapporto_dispositivo_numeroLotto">
+      <regola codiceErrore="1049" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>300</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+    <campo nomecampo="rapporto_dispositivo_dataScadenza">
+      <regola codiceErrore="1051" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^((0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/[12]\d{3})$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>                     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_CND">
+      <regola codiceErrore="1052" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>         
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_desCND">
+      <regola codiceErrore="1054" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1055" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>700</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_GMDN">
+      <regola codiceErrore="1057" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>20</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+    <campo nomecampo="rapporto_dispositivo_desGMDN">
+      <regola codiceErrore="1058" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>4000</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_EDMA">
+      <regola codiceErrore="1059" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>30</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_desEDMA">
+      <regola codiceErrore="1060" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>700</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_tipoIVD">
+      <regola codiceErrore="1061" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1062" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>10</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_descTipoIVD">
+      <regola codiceErrore="1064" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1065" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_valutazionePrestazioni">
+     <regola codiceErrore="1067" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>4000</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>       
+   </campo>
+   
+   <campo nomecampo="rapporto_dispositivo_utilizzo">
+      <regola codiceErrore="1068" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+       <regola codiceErrore="1069" descrizioneErrore="Non appartenenza al dominio di riferimento per un campo obbligatorio" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>M|P</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>      
+   </campo>
+    <campo nomecampo="rapporto_dispositivo_versioneSoftware">
+      <regola codiceErrore="1070" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>        
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_denominazioneFabbricante">
+      <regola codiceErrore="1071" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1072" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_nazioneFabbricante">
+      <regola codiceErrore="1074" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>         
+   </campo>
+    <campo nomecampo="rapporto_dispositivo_descNazioneFabbricante">
+      <regola codiceErrore="1076" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1077" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>30</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_regioneFabbricante" />
+   <campo nomecampo="rapporto_dispositivo_descRegioneFabbricante">
+      <regola codiceErrore="1082" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>40</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_provinciaFabbricante"/>
+   <campo nomecampo="rapporto_dispositivo_descProvinciaFabbricante">
+      <regola codiceErrore="1088" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>20</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_comuneFabbricante"/>
+   <campo nomecampo="rapporto_dispositivo_descComuneFabbricante">
+      <regola codiceErrore="1092" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>50</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+    <campo nomecampo="rapporto_dispositivo_localitaFabbricante">
+      <regola codiceErrore="1095" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+    <campo nomecampo="rapporto_dispositivo_indirizzoFabbricante">
+      <regola codiceErrore="10971" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/> 
+      <regola codiceErrore="1097" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_denominazioneMandatario">      
+      <regola codiceErrore="1097" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_nazioneMandatario" />-
+   <campo nomecampo="rapporto_dispositivo_descNazioneMandatario">
+      <regola codiceErrore="1106" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>30</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_regioneMandatario" />
+   <campo nomecampo="rapporto_dispositivo_descRegioneMandatario">
+      <regola codiceErrore="1112" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>40</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_provinciaMandatario" />
+   <campo nomecampo="rapporto_dispositivo_descProvinciaMandatario">
+      <regola codiceErrore="1117" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>20</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_comuneMandatario" />
+   <campo nomecampo="rapporto_dispositivo_descComuneMandatario">
+      <regola codiceErrore="1122" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>50</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+    <campo nomecampo="rapporto_dispositivo_localitaMandatario">
+      <regola codiceErrore="1125" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_dispositivo_indirizzoMandatario">
+      <regola codiceErrore="1128" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_evento_offeso">
+      <regola codiceErrore="1130" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+       <regola codiceErrore="1131" descrizioneErrore="Non appartenenza al dominio di riferimento per un campo obbligatorio" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>P|O</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>         
+   </campo>
+    <campo nomecampo="rapporto_evento_etaPaziente">
+      <regola codiceErrore="1132" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>3</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+      <regola codiceErrore="1133" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^\d{0,3}$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>      
+   </campo>
+    <campo nomecampo="rapporto_evento_inizPaziente">
+      <regola codiceErrore="1134" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaLunghezzaCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>size</key>
+                  <value>3</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>            
+   </campo>
+    <campo nomecampo="rapporto_evento_dataImpianto">
+       <regola codiceErrore="1135" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^((0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/[12]\d{3})$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>                     
+   </campo>
+    <campo nomecampo="rapporto_evento_isDispUtilizzato">
+      <regola codiceErrore="11361" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>     
+       <regola codiceErrore="1136" descrizioneErrore="Non appartenenza al dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>Y|N</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_utilizzo">
+       <regola codiceErrore="1138" descrizioneErrore="Non appartenenza al dominio di riferimento per un campo ad obbligatorietà condizionata" nome="regolaListaValoriAmmessiCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>1|2|3|4|5|6</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_descUtilizzo">
+      <regola codiceErrore="1140" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>40</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_altroUtilizzoDispo">
+      <regola codiceErrore="1141" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>40</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_classeIncidente">
+      <regola codiceErrore="1143" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1144" descrizioneErrore="Non appartenenza al dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>1|2|3</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_descClasseIncidente">
+    <regola codiceErrore="11451" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>     
+      <regola codiceErrore="1145" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>4000</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_descrizioneIncidente">
+    <regola codiceErrore="1146" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1147" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>4000</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+    <campo nomecampo="rapporto_evento_conseguenza">
+    <regola codiceErrore="1148" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>
+      <regola codiceErrore="1149" descrizioneErrore="Non appartenenza al dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>1|2|3|4|5|6|7|8</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+    <campo nomecampo="rapporto_evento_descConseguenza">
+     <regola codiceErrore="11501" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>    
+     <regola codiceErrore="1150" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+    <campo nomecampo="rapporto_evento_altraConseguenza">
+     <regola codiceErrore="1152" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>4000</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_numPezzi">
+      <regola codiceErrore="1153" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>  
+      <regola codiceErrore="1154" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^\d{0,3}$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_evento_disponibilitaDispositivo">
+      <regola codiceErrore="1155" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>  
+        <regola codiceErrore="1156" descrizioneErrore="Non appartenenza al dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>Y|N</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_luogoDisponibilitaDispositivo">
+       <regola codiceErrore="1158" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>4000</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_azioniIntraprese">
+      <regola codiceErrore="1159" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>       
+   </campo>
+   <campo nomecampo="rapporto_evento_textAzioniIntraprese">
+     <regola codiceErrore="1161" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>200</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_evento_altreAzioniIntraprese" />
+    <campo nomecampo="rapporto_evento_altreInformazioni">
+     <regola codiceErrore="1164" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>4000</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+    <campo nomecampo="rapporto_evento_dataRapporto">
+     <regola codiceErrore="1165" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>             
+       <regola codiceErrore="11651" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^((0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/[12]\d{3})$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>                     
+   </campo>
+    <campo nomecampo="rapporto_compilatore_ruolo">
+      <regola codiceErrore="1166" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>  
+        <regola codiceErrore="1167" descrizioneErrore="Non appartenenza al dominio di riferimento" nome="regolaListaValoriAmmessi">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>listaValoriAmmessi</key>
+                  <value>1|2|3</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_compilatore_descRuolo">
+     <regola codiceErrore="1168" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_compilatore_nome">
+   <regola codiceErrore="1169" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>  
+     <regola codiceErrore="1170" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>300</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_compilatore_cognome">
+   <regola codiceErrore="1172" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>  
+     <regola codiceErrore="1173" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>300</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_compilatore_qualificaCompilatore">
+   <regola codiceErrore="1175" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>  
+     <regola codiceErrore="1176" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>100</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_compilatore_struttSanitaria">
+   <regola codiceErrore="11781" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>  
+     <regola codiceErrore="1178" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>40</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola> 
+   </campo>
+   <campo nomecampo="rapporto_compilatore_codStruttSanitaria">
+      <regola codiceErrore="1180" descrizioneErrore="Mancata valorizzazione di un campo obbligatorio" nome="regolaObbligatorieta"/>  
+   </campo>
+   <campo nomecampo="rapporto_compilatore_telefonoCompilatore">       
+       <regola codiceErrore="1183" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>40</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+       <regola codiceErrore="1184" descrizioneErrore="Pattern errato in un campo ad obbligatorietà condizionata" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^\d{0,40}$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+   <campo nomecampo="rapporto_compilatore_faxCompilatore">
+      <regola codiceErrore="1187" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>40</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+       <regola codiceErrore="1188" descrizioneErrore="Pattern errato in un campo ad obbligatorietà condizionata" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^[0-9]{0,40}$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>     
+   </campo>
+    <campo nomecampo="rapporto_compilatore_emailCompilatore">
+      <regola codiceErrore="1191" descrizioneErrore="Lunghezza diversa da quella attesa" nome="regolaMaxLunghezzaFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>maxLunghezza</key>
+                  <value>60</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>
+       <regola codiceErrore="11911" descrizioneErrore="Datatype errato" nome="regolaRegexCampoFacoltativo">
+         <parametri>
+            <parametriMap>
+               <entry>
+                  <key>regex</key>
+                  <value>^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$</value>
+               </entry>
+            </parametriMap>
+         </parametri>
+      </regola>        
+   </campo>
+
+   
+   
+</flusso>

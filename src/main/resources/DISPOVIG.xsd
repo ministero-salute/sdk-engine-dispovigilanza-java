@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns="http://flussi.mds.it/flsDispovig" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://flussi.mds.it/flsDispovig" elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <xs:element name="flsDispovig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rapporto">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codRapportoWeb" />
+              <xs:element name="luogoEpisodio">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="numRapporto" />
+                    <xs:element name="rapportoRelativoA" />
+                    <xs:element name="codiceStruttura" />
+                    <xs:element name="nomeStruttura" />
+                    <xs:element name="annoValiditaStruttTerrit" />
+                    <xs:element name="repartoStruttura" />
+                    <xs:element name="telefono" />
+                    <xs:element name="fax" />
+                    <xs:element name="email" />
+                    <xs:element name="dataEpisodio" />
+                    <xs:element name="codAziendaOspLocale" />
+                    <xs:element name="aziendaOspLocale" />
+                    <xs:element name="nomeOperatore" />
+                    <xs:element name="cognomeOperatore" />
+                    <xs:element name="qualificaOperatore" />
+                    <xs:element name="nomeResponsabile" />
+                    <xs:element name="cognomeResponsabile" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="dispositivo">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="tipoDispositivo" />
+                    <xs:element name="codiceDispositivo" />
+                    <xs:element name="nomeDispositivo" />
+                    <xs:element name="modelloDispositivo" />
+                    <xs:element name="codiceFabbrDispositivo" />
+                    <xs:element name="numeroLotto" />
+                    <xs:element name="dataScadenza" />
+                    <xs:element name="CND" />
+                    <xs:element name="desCND" />
+                    <xs:element name="GMDN" />
+                    <xs:element name="desGMDN" />
+                    <xs:element name="EDMA" />
+                    <xs:element name="desEDMA" />
+                    <xs:element name="tipoIVD" />
+                    <xs:element name="descTipoIVD" />
+                    <xs:element name="valutazionePrestazioni" />
+                    <xs:element name="utilizzo" />
+                    <xs:element name="versioneSoftware" />
+                    <xs:element name="denominazioneFabbricante" />
+                    <xs:element name="nazioneFabbricante" />
+                    <xs:element name="descNazioneFabbricante" />
+                    <xs:element name="regioneFabbricante" />
+                    <xs:element name="descRegioneFabbricante" />
+                    <xs:element name="provinciaFabbricante" />
+                    <xs:element name="descProvinciaFabbricante" />
+                    <xs:element name="comuneFabbricante" />
+                    <xs:element name="descComuneFabbricante" />
+                    <xs:element name="localitaFabbricante" />
+                    <xs:element name="indirizzoFabbricante" />
+                    <xs:element name="denominazioneMandatario" />
+                    <xs:element name="nazioneMandatario" />
+                    <xs:element name="descNazioneMandatario" />
+                    <xs:element name="regioneMandatario" />
+                    <xs:element name="descRegioneMandatario" />
+                    <xs:element name="provinciaMandatario" />
+                    <xs:element name="descProvinciaMandatario" />
+                    <xs:element name="comuneMandatario" />
+                    <xs:element name="descComuneMandatario" />
+                    <xs:element name="localitaMandatario" />
+                    <xs:element name="indirizzoMandatario" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="evento">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="offeso" type="xs:string" />
+                    <xs:element name="etaPaziente" />
+                    <xs:element name="inizPaziente" />
+                    <xs:element name="dataImpianto" />
+                    <xs:element name="isDispUtilizzato" />
+                    <xs:element name="utilizzo" />
+                    <xs:element name="descUtilizzo" />
+                    <xs:element name="altroUtilizzoDispo" />
+                    <xs:element name="classeIncidente" />
+                    <xs:element name="descClasseIncidente" />
+                    <xs:element name="descrizioneIncidente" />
+                    <xs:element name="conseguenza" />
+                    <xs:element name="descConseguenza" />
+                    <xs:element name="altraConseguenza" />
+                    <xs:element name="numPezzi" />
+                    <xs:element name="disponibilitaDispositivo" />
+                    <xs:element name="luogoDisponibilitaDispositivo" />
+                    <xs:element name="azioniIntraprese" />
+                    <xs:element name="textAzioniIntraprese" />
+                    <xs:element name="altreAzioniIntraprese" />
+                    <xs:element name="altreInformazioni" />
+                    <xs:element name="dataRapporto" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="compilatore">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ruolo" />
+                    <xs:element name="descRuolo" />
+                    <xs:element name="nome" />
+                    <xs:element name="cognome" />
+                    <xs:element name="qualificaCompilatore" />
+                    <xs:element name="struttSanitaria" />
+                    <xs:element name="codStruttSanitaria" />
+                    <xs:element name="telefonoCompilatore" />
+                    <xs:element name="faxCompilatore" />
+                    <xs:element name="emailCompilatore" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
