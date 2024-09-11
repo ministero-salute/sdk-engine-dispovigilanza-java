@@ -105,7 +105,7 @@ public class FlussoDispovigControllerRest implements ValidazioneController<Recor
         InfoRun infoRun = gestoreRunLog.creaRunLog(flusso.getIdClient(), flusso.getModalitaOperativa(), 0, nomeFlusso);
         infoRun.setTipoElaborazione(TipoElaborazione.F);
         infoRun.setTimestampCreazione(new Timestamp(System.currentTimeMillis()));
-        infoRun.setVersion(getClass().get/* SPDX-License-Identifier: BSD-3-Clause */().getImplementationVersion());
+        infoRun.setVersion(getClass().getPackage().getImplementationVersion());
         infoRun.setAnnoRiferimento(flusso.getAnnoRiferimento());
         infoRun.setPeriodoRiferimento(flusso.getPeriodoRiferimento());
         infoRun.setCodiceRegione(flusso.getCodiceRegione());
