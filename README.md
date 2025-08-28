@@ -3,7 +3,7 @@
 ||||
 
 
-![](img/Aspose.Words.73a420d9-2fea-4ebc-9cd4-be228af382ca.001.jpeg)
+![](img/img9.jpeg)
 
 **Progetto SDK**
 
@@ -79,7 +79,7 @@ Specifiche Funzionali
 
 Il Ministero della Salute (MdS) metterà a disposizione degli Enti da cui riceve dati applicazioni SDK specifiche per flusso logico e tecnologie applicative (Java, PHP e C#) per verifica preventiva (in casa Ente) della qualità del dato prodotto.
 
-![](img/Aspose.Words.73a420d9-2fea-4ebc-9cd4-be228af382ca.002.png)
+![](img/img4.png)
 
 Nel presente documento sono fornite la struttura e la sintassi dei tracciati previsti dalla soluzione SDK per avviare il proprio processo elaborativo, nonché i relativi schemi xsd di convalida e i controlli di merito sulla qualità, completezza e coerenza dei dati. 
 
@@ -95,7 +95,7 @@ In generale, la soluzione SDK è costituita da 2 diversi moduli applicativi (Acc
 
 La figura che segue descrive la soluzione funzionale ed i relativi benefici attesi.
 
-![](img/Aspose.Words.73a420d9-2fea-4ebc-9cd4-be228af382ca.003.png)
+![](img/img2.png)
 
 1. ## ***Acronimi***
 
@@ -114,11 +114,11 @@ Nella tabella riportata di seguito sono elencati tutti gli acronimi e le definiz
 
 Di seguito una rappresentazione architetturale del processo di gestione e trasferimento dei flussi dall’ente verso l’area MdS attraverso l’utilizzo dell’applicativo SDK, e il corrispondente diagramma di sequenza.
 
-![](img/Aspose.Words.73a420d9-2fea-4ebc-9cd4-be228af382ca.004.jpeg)
+![](img/img5.jpeg)
 
 ![A picture containing graphical user interface
 
-![]((img/Aspose.Words.73a420d9-2fea-4ebc-9cd4-be228af382ca.005.png)
+![]((img/img6.png)
 
 
 1. L’utente dell’ente caricherà in una apposita directory (es. /sdk/input/) il flusso sorgente.  L’utente avvierà l’SDK passando in input una serie di parametri descritti in dettaglio al paragrafo 3.1
@@ -156,7 +156,7 @@ La figura sottostante mostra l’architettura di integrazione della soluzione SD
 - SDK provvederà ad inviare vs MdS l’output (record validati) delle proprie elaborazioni. A fronte di tale invio, il MdS provvederà a generare un identificativo di avvenuta acquisizione del dato che SDK memorizzerà a fini di logging.
 
 
-![](img/Aspose.Words.73a420d9-2fea-4ebc-9cd4-be228af382ca.006.png)
+![](img/img3.png)
 
 
 1. # **Funzionamento della soluzione SDK**
@@ -605,147 +605,25 @@ Dove:
 
 
 
-## ***3.3 Flussi di Output per alimentazione MdS***
+## Istruzioni per l'installazione
 
-A valle delle verifiche effettuate dal Validation Engine, qualora il caricamento sia stato effettuato con il parametro Finalità Elaborazione impostato a Produzione, verranno inviati verso MdS tutti i record corretti secondo le regole di validazione impostate. 
-
-Verrà richiamata la procedura messa a disposizione dal MdS alla quale verranno passati in input i seguenti parametri:
-
-
-|**NOME PARAMETRO**|**VALORIZZAZIONE**|
-| :- | :- |
-|ANNO RIFERIMENTO|Parametro ANNO RIFERIMENTO in input a SDK|
-|PERIODO RIFERIMENTO|Parametro PERIODO RIFERIMENTO in input a SDK |
-|CATEGORIA FLUSSI|DISP|
-|NOME FLUSSO|VIG|
-|NOME FILE|Parametro popolato dall’SDK in fase di invio flusso con il nome file generato dal Validation Engine in fase di produzione file.|
-
-Il flusso generato dall’SDK sarà presente sotto la cartella /sdk/xml\_output e dovrà essere salvato e inviato verso MdS rispettando la seguente nomenclatura:
-
-- **SDK\_DISP\_VIG\_{ Periodo di riferimento }\_{ID\_RUN}.xml**
-
-Dove :
-
-- Periodo di Riferimento rappresenta il periodo con il quale viene lanciato l’SDK;
-- ID\_RUN rappresenta l’identificativo univoco. 
-
-A valle della presa in carico del dato da parte di MdS, SDK riceverà una response contenente le seguenti informazioni:
-
-1. **codiceFornitura**: stringa numerica indicante l’identificativo univoco della fornitura inviata al servizio
-1. **errorCode**: stringa alfanumerica di 256 caratteri rappresentante il codice identificativo dell’errore eventualmente riscontrato
-1. **errorText**: stringa alfanumerica di 256 caratteri rappresentante il descrittivo dell’errore eventualmente riscontrato
-1. Insieme delle seguenti triple, una per ogni file inviato:
-1. **idUpload**: stringa numerica indicante l’identificativo univoco del singolo file ricevuto ed accettato dal MdS, e corrispondente al file inviato con la denominazione riportata nell’elemento “nomeFile” che segue
-1. **esito**: stringa alfanumerica di 4 caratteri rappresentante l’esito dell’operazione (Vedi tabella sotto)
-1. **nomeFile**: stringa alfanumerica di 256 caratteri rappresentante il nome dei file inviati.
-
-Copia dei file inviati verso MdS il cui esito è positivo (ovvero risposta della procedura Invio Flussi con IF00) saranno trasferiti e memorizzati in una cartella ad hoc di SDK (es. /sdk/sent) rispettando la seguente naming: 
-
-- SDK\_DISP\_VIG\_{Periodo di riferimento}\_{ID\_RUN}.xml
-
-Dove :
-
-- Periodo di Riferimento rappresenta il periodo con il quale viene lanciato l’SDK;
-- ID\_RUN rappresenta l’identificativo univoco 
-
-Di seguito la tabella di riepilogo dei codici degli esiti possibili dell’invio del file
-
-
-|**ESITO**|**DESCRIZIONE**|
-| :- | :- |
-|AE00|Errore di autenticazione al servizio|
-|IF00|Operazione completata con successo|
-|IF01|Incongruenza tra CF utente firmatario e cf utente inviante|
-|IF02|Firma digitale non valida|
-|IF03|Firma digitale scaduta|
-|IF04|Estensione non ammessa|
-|IF05|Utente non abilitato all’invio per la Categoria Flusso indicata|
-|IF06|Utente non abilitato all’invio per il Flusso indicata|
-|IF07|Periodo non congurente con la Categoria Flusso indicata|
-|IF08|Il file inviato è vuoto|
-|IF09|Errore interno al servizio nella ricezione del file|
-|IF10|Il numero di allegati segnalati nel body non corrisponde al numero di allegati riscontrati nella request|
-|IF11|Il nome dell’allegato riportato nel body non è presente tra gli allegati della request (content-id)|
-|IF12|Presenza di nomi file duplicati|
-|IF13|Errore interno al servizio nella ricezione del file|
-|IF14|Errore interno al servizio nella ricezione del file|
-|IF15|Errore interno al servizio nella ricezione del file|
-|IF99|Errore generico dell’operation|
-## ***3.4 Scarti di processamento***
-
-In una cartella dedicata (es. /sdk/esiti) verrà creato un file json contenente il dettaglio degli scarti riscontrati ad ogni esecuzione del processo SDK. 
-
-Il naming del file sarà:  ESITO\_{ID\_RUN}.json 
-
-Dove:
-
-- ID\_RUN rappresenta l’identificativo univoco dell’elaborazione
-
-Di seguito il tracciato del record da produrre.
-
-
-|**CAMPO**|**DESCRIZIONE**|
-| :- | :- |
-|NUMERO RECORD|Numero del record del flusso input|
-|RECORD PROCESSATO|Campi esterni rispetto al tracciato, che sono necessari per la validazione dello stesso.|
-||Record su cui si è verificato uno scarto, riportato in maniera strutturata (nome\_campo-valore).|
-|LISTA ESITI|<p>Lista di oggetti contenente l’esito di validazione per ciascun campo:</p><p>- Campo: nome campo su cui si è verificato uno scarto</p><p>- Valore Scarto: valore del campo su cui si è verificato uno scarto</p><p>- Valore Esito: esito di validazione del particolare campo</p><p>- Errori Validazione: contiene i campi Codice (della Business Rule) e Descrizione (della Business Rule)</p>|
-## ***3.5 Informazioni dell’esecuzione***
-
-In una cartella dedicata (es. /sdk/run) verrà creato un file contenente il dettaglio degli esiti riscontrati ad ogni esecuzione del processo SDK.
-
-Il naming del file sarà:  
-
-{ID\_RUN}.json
-
-Dove:
-
-- ID\_RUN rappresenta l’identificativo univoco dell’elaborazione
-
-Di seguito il tracciato del record da produrre.
-
-
-|**CAMPO**|**DESCRIZIONE**|
-| :- | :- |
-|ID RUN (chiave)|Identificativo univoco di ogni esecuzione del SDK|
-|ID\_CLIENT|Identificativo Univoco della trasazione sorgente che richiede processamento lato SDK|
-|ID UPLOAD (chiave)|<p>Identificativo di caricamento fornito da MdS.</p><p>Contiene elenco dei codice identificativi generati dal sistema (DVO).</p>|
-|TIPO ELABORAZIONE|F (full)/R (per singolo record) - Impostato di default a F|
-|MODALITA’ OPERATIVA|P (=produzione) /T (=test)|
-|DATA INIZIO ESECUZIONE|Timestamp dell’ inizio del processamento|
-|DATA FINE ESECUZIONE|Timestamp di completamento del processamento|
-|STATO ESECUZIONE |<p>Esito dell’esecuzione dell’ SDK. </p><p>Possibili valori: </p><p>- IN ELABORAZIONE: Sdk in esecuzione;</p><p>- ELABORATA: Esecuzione completata con successo;</p><p>- KO: Esecuzione fallita: </p><p>- KO SPECIFICO: Esecuzione fallita per una fase/componente più rilevante della soluzione (es. ko\_gestione\_file, ko\_gestione\_validazione, ko\_invio\_ministero, etc.); </p><p>- KO GENERICO: un errore generico non controllato.</p>|
-|FILE ASSOCIATI RUN|nome del file di input elaborato dall’SDK|
-|NOME FLUSSO|{DISPOVI}, valore fisso che identifica lo specifico SDK in termini di categoria e nome flusso|
-|NUMERO RECORD |Numero di record del flusso input|
-|NUMERO RECORD ACCETTATI|Numero validi|
-|NUMERO RECORD SCARTATI|Numero scarti|
-|VERSION|Versione del SDK (Access Layer e Validation Engine)|
-|TIMESTAMP CREAZIONE|Timestamp creazione della info run|
-|API (\*DPM)|Rappresenta L’API utilizzata per il flusso DPM (non valorizzata per gli altri flussi)|
-|IDENTIFICATIVO SOGGETTO ALIMENTANTE (\*DPM)|Chiave flusso DPM (non valorizzata per gli altri flussi)|
-|TIPO ATTO (\*DPM)|Chiave flusso DPM (non valorizzata per gli altri flussi)|
-|NUMERO ATTO (\*DPM)|Chiave flusso DPM (non valorizzata per gli altri flussi)|
-|TIPO ESITO MDS (\*DPM)|Esito della response dell’API 2 (non valorizzata per gli altri flussi) |
-|DATA RICEVUTA MDS (\*DPM)|Data della response dell’API 3 (non valorizzata per gli altri flussi)|
-|CODICE REGIONE|Codice Regione del Mittente|
-|ANNO RIFERIMENTO|Anno cui si riferiscono i dati del flusso|
-|PERIODO DI RIFERIMENTO|Rappresenta il mese di riferimento dei dati del flusso (es. 12)|
-|DESCRIZIONE STATO ESECUZIONE |Specifica il messaggio breve dell’errore, maggiori informazioni saranno presenti all’interno del log applicativo|
-|NOME FILE OUTPUT MDS|Nome dei file di output inviati verso MdS|
-|ESITO ACQUISIZIONE FLUSSO|Codice dell’esito del processo di acquisizione del flusso su MdS. Tale campo riflette la proprietà invioFlussiReturn/listaEsitiUpload/item/esito della response della procedura **invioFlussi**. (Es IF00)|
-|CODICE ERRORE INVIO FLUSSI|Codice d’errore della procedura di invio. Tale campo riflette la proprietà InvioFlussiReturn/errorCode della response della procedura **invioFlussi**|
-|TESTO ERRORE INVIO FLUSSI|Descrizione codice d’errore della procedura.Tale campo riflette la proprietà InvioFlussiReturn/ errorText della response della procedura **invioFlussi**|
-
-Inoltre, a supporto dell’entità che rappresenta lo stato dell’esecuzione, sotto la cartella /sdk/log, saranno presenti anche i file di log applicativi (aggregati giornalmente) non strutturati, nei quali saranno presenti informazioni aggiuntive, ad esempio lo StackTrace (in caso di errori).
-
-Il naming del file, se non modificata la politica di rolling (impostazioni) sarà: 
-
-SDK \_DISP\_VIG.log.
+Per l'installazione e l'avvio dell'engine seguire la documentazione tecnica dettagliata disponibile all'url [`INSTALL.md`](https://github.com/ministero-salute/sdk-utilities-regole-properties/blob/main/INSTALL.md).
 
 **NOTA BENE**: 
 
 **Per la trasmissione del flusso Dispovigilance è previsto che il parametro “soglia.invio.mds” nel file di configurazione “/sdk/properties” sia impostato con il valore 100 per permettere uno scarto totale del file di input anche in presenza di un solo record non corretto evitando in questo modo acquisizioni parziali e scongiurando inconsistenze dei dati nel Sistema.** 
+
+## 📝 Licenza
+Questo progetto è rilasciato sotto licenza BSD 3-Clause License così come definita [BSD 3-Clause License](./LICENSE).
+
+## 🤝 Contributi
+I contributi sono benvenuti. Si prega di consultare il file [`CONTRIBUTING.md`](CONTRIBUTING.md) per le linee guida su come contribuire al progetto.
+
+## 📞 Contatti
+Per ulteriori informazioni, contattare:
+
+- **Service Desk - Ministero della Salute**: servicedesk.mds@medilifegroupspa.com
+- **Amministrazione titolare**: [Ministero della Salute](https://www.salute.gov.it)
 
 ## mantainer:
  Accenture SpA until January 2026
